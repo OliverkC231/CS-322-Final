@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Add Trip</title>
     <!-- Link to an external CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="add_trip.css">
+    <script src="add_trip.js"></script>
 </head>
 <body>
+    <!-- the sticky header at the top of the pages (can use the same for the other pages) -->
+    <header class="pageHeader">
+        <!--logo that'll take you to the home page-->
+        <a href="home.html" class="logo">
+            <img src="TripliLogo.png" id="logo" alt="logo">
+        </a>
 
-    <h1>Hello, World!</h1>
-    <p>This is my first website using basic HTML starter code.</p>
+        <!--the links that'll take you to the other pages-->
+        <nav class="navLinks">
+            <a href="home.html">Home</a>
+            <a href="upcoming_trips.html">Upcoming Trips</a>
+            <a href="past_trips.html">Past Trips</a>
+            <a href="what_if.html">What if?</a>
+        </nav>
+    </header>
 
-    <!-- Link to an external JavaScript file -->
-    <script src="script.js"></script>
+    <main>
+        <h1>Add Trip</h1>
+    </main>
+    
 </body>
 </html>
