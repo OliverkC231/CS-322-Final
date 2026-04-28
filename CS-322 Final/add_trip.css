@@ -2,6 +2,7 @@
 
 body {
     background-color: #f7f7e6;
+    font: 16px "Lexend Deca", sans-serif;
 }
 
 .pageHeader {
@@ -19,6 +20,9 @@ body {
 .logo img {
     height: 50px;
     display: block;
+    margin-left: -7px;
+    margin-bottom: -17px;
+    margin-top: -5px;
 }
 
 .navLinks {
@@ -48,3 +52,75 @@ h1 {
     padding: 14px 32px;
     font-size: 50px;
 }
+
+form {
+    background-color: #abd1c1;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    font-size: 24px;
+    color: #fdfbd3;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#cityVisting {
+    margin-bottom: auto;
+}
+
+.form-group {
+    display: flex;          /* <-- required */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+}
+
+#budgetSlider {
+    width: 95%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4d8278;
+    background-color: #f7f7e6;
+    box-shadow: 0 0 5px rgba(77, 130, 120, 0.5);
+}
+
+.required {
+    color: #4d8278;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.itinerary-panel h2 {
+    color: #4d8278;
+}
+
+.itinerary-panel {
+    background-color: #abd1c1;
+    color: #fdfbd3;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    min-height: 400px;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 30px auto;
+    align-items: start;
+}
+
+#previewTripName, #previewCities, #previewDates, #previewBudget {
+    color: #4d8278;
+}   
