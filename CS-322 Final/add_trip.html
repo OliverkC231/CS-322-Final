@@ -13,9 +13,9 @@
 <body>
     <!-- the sticky header at the top of the pages (can use the same for the other pages) -->
     <header class="pageHeader">
-        <!--logo that'll take you to the home page-->
+        <!--logo that'll take you to the home page-->  
         <a href="home.html" class="logo">
-            <img src="TripliLogo.png" id="logo" alt="logo">
+            <img src="logo.png" id="logo" alt="logo">
         </a>
 
         <!--the links that'll take you to the other pages-->
@@ -29,46 +29,56 @@
 
     <main>
         <h1>Add Trip</h1>
-
         <!--the form to add details of the trip-->
-        <form id="addTripForm">
+        <div class="split-layout">
+            <form id="addTripForm">
 
-            <!--div for the trip name-->
-            <div class="form">
-                <label for="tripName">Trip Name *</label>
-                <input type="text" id="tripName" name="tripName" placeholder="e.g. Japan spring trip" required>
-            </div>
+                <!--div for the trip name-->
+                <div class="form">
+                    <label for="tripName">Trip Name <span class="required">*</span></label>
+                    <input type="text" id="tripName" name="tripName" placeholder="e.g. Japan spring trip" required>
+                </div>
 
-            <!--div for the cities they're visting-->
-            <div class="form">
-                <label for="cityVisting">Cities Visting *</label>
-                <input type="text" id="cityVisting" placeholder="Start typing a city..." required>
+                <!--div for the cities they're visting-->
+                <div class="form">
+                    <label for="cityVisting">Cities Visting <span class="required">*</span></label>
+                    <input type="text" id="cityVisting" placeholder="Start typing a city...">
 
-                <ul id="citySuggestions" class="suggestions"></ul>
-                <div id="citiesSelected" class="selected"></div>
-            </div>
+                    <ul id="citySuggestions" class="suggestions"></ul>
+                    <div id="citiesSelected" class="selected"></div>
+                </div>
 
-            <!--div for the days they're traveling-->
-            <div class="form">
-                <label for="tripDates">Trip Dates *</label>
-                <input type="date" id="startDate" required>
-                <input type="date" id="endDate" required>
-            </div>
+                <!--div for the days they're traveling-->
+                <div class="form">
+                    <label for="tripDates">Trip Dates <span class="required">*</span></label>
+                    <input type="date" id="startDate" required>
+                    <input type="date" id="endDate" required>
+                </div>
 
-            <!--div for the budget range (ticketmaster's slider for reference)-->
-            <div class="form-group">
-                <label for="budgetSlider">Budget Range *</label>
+                <!--div for the budget range (ticketmaster's slider for reference)-->
+                <div class="form-group">
+                    <label for="budgetSlider">Budget Range <span class="required">*</span></label>
 
-                <!-- the actual slider-->
-                <div id="budgetSlider"></div>
+                    <!-- the actual slider-->
+                    <div id="budgetSlider"></div>
 
-                <!-- value range for slider -->
-                <span id="budgetValue">$0 - $15,000</span>
-            </div>
+                    <!-- value range for slider -->
+                    <span id="budgetValue">$0 - $15,000</span>
+                </div>
 
-            <button type="submit">Create Trip</button>
+                <button type="submit">Create Trip</button>
 
-        </form>
+            </form>
+
+            <section class="itinerary-panel">
+                <h2>Trip Itinerary</h2>
+
+                <p><strong>Trip Name:</strong> <span id="previewTripName"></span></p>
+                <p><strong>Cities:</strong> <span id="previewCities"></span></p>
+                <p><strong>Dates:</strong> <span id="previewDates"></span></p>
+                <p><strong>Budget:</strong> <span id="previewBudget"></span></p>
+            </section>
+        </div>
     </main>
     
 </body>
