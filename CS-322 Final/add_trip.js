@@ -64,6 +64,8 @@ function renderSelectedCities() {
         tag.appendChild(name);
 
         selectedBox.appendChild(tag);
+
+        selectedBox.style.marginBottom = "20px";
     });
 }
 
@@ -101,4 +103,51 @@ cityInput.addEventListener("input", async function () {
         console.error("City API error:", error);
     }
 
+    const form = document.getElementById("addTripForm");
+
+});
+
+const form = document.getElementById("addTripForm");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const tripName = document.getElementById("tripName").value.trim();
+    const startDate = document.getElementById("startDate").value;
+    const endDate = document.getElementById("endDate").value;
+    const budget = document.getElementById("budgetValue").textContent;
+    const typedCity = cityInput.value.trim();
+
+    if (typedCity === "" && selectedCities.length === 0) {
+        e.preventDefault();
+        alert("Please type a city or select at least one city.");
+        cityInput.focus();
+        return;
+    }
+
+    if (typedCity !== "" && selectedCities.length === 0) {
+        addCity(typedCity);
+    }
+
+    document.getElementById("previewTripName").textContent = tripName;
+    document.getElementById("previewCities").textContent = selectedCities.join(", ");
+    document.getElementById("previewDates").textContent = `${startDate} to ${endDate}`;
+    document.getElementById("previewBudget").textContent = budget;
+});
+
+const startInput = document.getElementById("startDate");
+const endInput = document.getElementById("endDate");
+const preview = document.getElementById("dateRangePreview");
+
+function updatePreview() {
+    if (startInput.value && endInput.value) {
+        preview.textContent = `${startInput.value} → ${endInput.value}`;
+    }
+}
+
+startInput.addEventListener("change", updatePreview);
+endInput.addEventListener("change", updatePreview);
+
+startInput.addEventListener("change", () => {
+    endInput.min = startInput.value;
 });
