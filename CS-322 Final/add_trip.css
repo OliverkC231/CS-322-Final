@@ -124,3 +124,24 @@ input:focus {
 #previewTripName, #previewCities, #previewDates, #previewBudget {
     color: #4d8278;
 }   
+
+.city-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 6px 6px 0 0;
+    font-size: 16px;
+}
+
+.remove-btn {
+    border: none;
+    background: transparent;
+    color: #f7f7e6;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
