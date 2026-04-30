@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <!-- Link to an external CSS file -->
+    <link rel="stylesheet" href="long_in.css">
+    <script src="log_in.js" defer></script>
+</head>
+<body>
+    <!-- the sticky header at the top of the pages (can use the same for the other pages) -->
+    <header class="pageHeader">
+        <!--logo that'll take you to the home page-->  
+        <a href="home.html" class="logo">
+            <img src="logo.png" id="logo" alt="logo">
+        </a>
 
+        <!--the links that'll take you to the other pages-->
+        <nav class="navLinks">
+            <a href="home.html">Home</a>
+            <a href="upcoming_past_trips.html">Saved Trips</a>
+            <a href="add_trip.html">Add Trips</a>
+            <a href="what_if.html">What if?</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Log In or Sign Up</h1>
+
+        <div class="form">
+
+        <!--users can log in here if they have a account-->
+        <section class="auth_form">
+            <h2>Log In</h2>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit">Log In</button>
+            </form>
+        </section>
+
+        <!--users make an account if they dont have one-->
+        <section class="auth_form">
+            <h2>Sign Up</h2>
+
+            <form id="signupForm">
+                <label for="signupName">Name</label>
+                <input type="text" id="signupName" name="signupName" required>
+
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+
+    </div>
+    </main>
+</body>
+</html>
