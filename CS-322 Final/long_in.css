@@ -1,1 +1,118 @@
+/* Colors to use: #f7f7e6, #a9d3cb, #4d8278*/
 
+body {
+    background-color: #f7f7e6;
+    font: 16px "Lexend Deca", sans-serif;
+}
+
+.pageHeader {
+    background-color: #f7f7e6;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-right: 7px;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+    margin-left: -7px;
+    margin-bottom: -17px;
+    margin-top: -5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: #4d8278;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navLinks a:hover {
+    background-color: #a9d3cb;
+    color: #f8f8ec;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 14px 32px;
+    font-size: 50px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+.auth_form {
+    background-color: #abd1c1;
+    color: #fdfbd3;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.auth_form h2 {
+    color: #4d8278;
+    text-align: center;
+    font-size: 34px;
+    margin-top: 0;
+}
+
+.auth_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth_form label {
+    font-weight: 500;
+}
+
+.auth_form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.auth_form input:focus {
+    outline: none;
+    border-color: #4d8278;
+    background-color: #f7f7e6;
+    box-shadow: 0 0 5px rgba(77, 130, 120, 0.5);
+}
+
+.auth_form button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.auth_form button:hover {
+    background-color: #37645c;
+}
