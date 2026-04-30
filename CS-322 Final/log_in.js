@@ -65,6 +65,15 @@ loginForm.addEventListener("submit", function (e) {
         return;
     }
 
+    sessionStorage.setItem("loggedInUser", JSON.stringify({
+    name: validUser.name,
+    email: validUser.email
+    }));
+
+sessionStorage.setItem("lastActivity", Date.now());
+
+window.location.href = "home.html";
+
     // says that the user is logged in right now
     localStorage.setItem("loggedInUser", JSON.stringify(validUser));
 
