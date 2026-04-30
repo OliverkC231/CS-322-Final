@@ -1,1 +1,99 @@
+/* Colors to use: #f7f7e6, #a9d3cb, #4d8278*/
 
+body {
+    background-color: #f7f7e6;
+    font: 16px "Lexend Deca", sans-serif;
+}
+
+.pageHeader {
+    background-color: #f7f7e6;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-right: 7px;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+    margin-left: -7px;
+    margin-bottom: -17px;
+    margin-top: -5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: #4d8278;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navLinks a:hover {
+    background-color: #a9d3cb;
+    color: #f8f8ec;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 14px 32px;
+    font-size: 50px;
+}
+
+.past-panel h2, .upcoming-panel h2 {
+    color: #4d8278;
+}
+
+.past-panel, .upcoming-panel {
+    background-color: #abd1c1;
+    color: #fdfbd3;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    min-height: 400px;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 30px auto;
+    align-items: start;
+}
+
+.trip-card {
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.trip-card h3 {
+    color: #f7f7e6;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.trip-card p {
+    margin: 8px 0;
+}
+
+.trip-card strong {
+    color: #a9d3cb;
+}
