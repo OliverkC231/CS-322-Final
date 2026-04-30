@@ -1,0 +1,143 @@
+/* Colors to use: #f7f7e6, #a9d3cb, #4d8278*/
+
+body {
+    background-color: #f7f7e6;
+    font: 16px "Lexend Deca", sans-serif;
+}
+
+.pageHeader {
+    background-color: #f7f7e6;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-right: 7px;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+    margin-left: -7px;
+    margin-bottom: -17px;
+    margin-top: -5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: #4d8278;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navLinks a:hover {
+    background-color: #a9d3cb;
+    color: #f8f8ec;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 14px 32px;
+    font-size: 50px;
+}
+
+.home-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.home-button {
+    background-color: #4d8278;
+    color: #f7f7e6;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 28px;
+    border-radius: 14px;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 10px rgba(77, 130, 120, 0.25);
+}
+
+.home-button:hover {
+    background-color: #a9d3cb;
+    color: #4d8278;
+    transform: translateY(-2px);
+}
+
+.trip-preview-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.trip-preview-section h2 {
+    color: #4d8278;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.home-preview-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.home-preview-column {
+    background-color: #abd1c1;
+    padding: 22px;
+    border-radius: 14px;
+    min-height: 250px;
+}
+
+.home-preview-column h3 {
+    color: #4d8278;
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.home-trips-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.home-trip-card {
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 16px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(77, 130, 120, 0.25);
+}
+
+.home-trip-card h4 {
+    margin: 0 0 8px 0;
+    color: #f7f7e6;
+    font-size: 20px;
+}
+
+.home-trip-card p {
+    margin: 0;
+    color: #a9d3cb;
+    font-size: 16px;
+}
+
+.empty-message {
+    color: #fdfbd3;
+    font-size: 18px;
+}
