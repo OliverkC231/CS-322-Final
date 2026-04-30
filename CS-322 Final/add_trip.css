@@ -94,7 +94,7 @@ input:focus {
 }
 
 .required {
-    color: #4d8278;
+    color: #e12929;
     font-size: 18px;
     font-weight: bold;
 }
