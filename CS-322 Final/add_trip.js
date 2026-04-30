@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function (){
 // the array that holds all the cities the user selects
 let selectedCities = [];
 
-// some const's i use later lol
 const cityInput = document.getElementById("cityVisting");
 const suggestionsBox = document.getElementById("citySuggestions");
 const selectedBox = document.getElementById("citiesSelected");
