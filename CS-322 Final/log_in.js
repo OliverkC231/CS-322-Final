@@ -71,3 +71,40 @@ loginForm.addEventListener("submit", function (e) {
     // brings user to home page
     window.location.href = "home.html";
 });
+
+// this will log the user out due to inactivity (code from stack overflow)
+
+// Set timeout variables.
+var timoutWarning = 540000; // Display warning in 9 Mins.
+var timoutNow = 600000; // Timeout in 10 mins.
+var logoutUrl = 'logout.php'; // URL to logout page.
+
+var warningTimer;
+var timeoutTimer;
+
+// Start timers.
+function StartTimers() {
+    warningTimer = setTimeout("IdleWarning()", timoutWarning);
+    timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+}
+
+// Reset timers.
+function ResetTimers() {
+    clearTimeout(warningTimer);
+    clearTimeout(timeoutTimer);
+    StartTimers();
+    $("#timeout").dialog('close');
+}
+
+// Show idle timeout warning dialog.
+function IdleWarning() {
+    //$("#timeout").dialog({
+    //modal: true
+    alert("Warning! Your page will redirected to login page due to inactivity.");
+//});
+}
+
+// Logout the user.
+function IdleTimeout() {
+    window.location = logoutUrl;
+}
