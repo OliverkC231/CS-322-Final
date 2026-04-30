@@ -19,14 +19,27 @@
         <!--the links that'll take you to the other pages-->
         <nav class="navLinks">
             <a href="home.html">Home</a>
-            <a href="save_trip.html">Saved Trips</a>
+            <a href="add_trip.html">Add Trips</a>
             <a href="what_if.html">What if?</a>
         </nav>
     </header>
 
     <main>
-        <h1>Past and Upcoming Trips</h1>
+        <h1>Upcoming and Past Trips</h1>
+
+        <div class="split-layout">
+            <!-- upcoming trips column -->
+            <section class="upcoming-panel">
+                <h2>Upcoming Trips</h2>
+                <div id="upcomingTripsList"></div>
+            </section>
+
+            <!-- past trips column -->
+            <section class="past-panel">
+                <h2>Past Trips</h2>
+                <div id="pastTripsList"></div>
+            </section>
+        </div>
     </main>
-    
 </body>
 </html>
