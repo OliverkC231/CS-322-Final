@@ -117,30 +117,44 @@ form.addEventListener("submit", function (e) {
     const budget = document.getElementById("budgetValue").textContent;
     const typedCity = cityInput.value.trim();
     const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
-    const trip = {
-        userEmail: loggedInUser.email,
-        tripName: tripName,
-        cities: selectedCities,
-        startDate: startDate,
-        endDate: endDate,
-        budget: budget
-    };
 
-    if (typedCity === "" && selectedCities.length === 0) {
-        e.preventDefault();
+    // if the user is not logged in, this sends them to login page
+    if (!loggedInUser) {
+        alert("Please log in before adding a trip.");
+        window.location.href = "log_in.html";
+        return;
+    }
+
+    // if the user typed a city but did not click it, add it
+    if (typedCity !== "" && selectedCities.length === 0) {
+        addCity(typedCity);
+    }
+
+    if (selectedCities.length === 0) {
         alert("Please type a city or select at least one city.");
         cityInput.focus();
         return;
     }
 
-    if (typedCity !== "" && selectedCities.length === 0) {
-        addCity(typedCity);
-    }
+    const trip = {
+        userEmail: loggedInUser.email,
+        tripName: tripName,
+        cities: [...selectedCities],
+        startDate: startDate,
+        endDate: endDate,
+        budget: budget
+    };
+
+    const trips = JSON.parse(localStorage.getItem("trips")) || [];
+    trips.push(trip);
+    localStorage.setItem("trips", JSON.stringify(trips));
 
     document.getElementById("previewTripName").textContent = tripName;
     document.getElementById("previewCities").textContent = selectedCities.join(", ");
     document.getElementById("previewDates").textContent = `${startDate} to ${endDate}`;
     document.getElementById("previewBudget").textContent = budget;
+
+    alert("Trip saved successfully!");
 });
 
 const startInput = document.getElementById("startDate");
