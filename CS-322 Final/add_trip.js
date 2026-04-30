@@ -116,6 +116,15 @@ form.addEventListener("submit", function (e) {
     const endDate = document.getElementById("endDate").value;
     const budget = document.getElementById("budgetValue").textContent;
     const typedCity = cityInput.value.trim();
+    const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
+    const trip = {
+        userEmail: loggedInUser.email,
+        tripName: tripName,
+        cities: selectedCities,
+        startDate: startDate,
+        endDate: endDate,
+        budget: budget
+    };
 
     if (typedCity === "" && selectedCities.length === 0) {
         e.preventDefault();
