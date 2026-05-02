@@ -1,6 +1,3 @@
-// wanted to add something to log them out but will probz figure that out after other pages r made
-
-
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 
