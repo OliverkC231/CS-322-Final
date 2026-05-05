@@ -1,0 +1,54 @@
+/* Colors to use: #f7f7e6, #a9d3cb, #4d8278*/
+
+body {
+    background-color: #f7f7e6;
+    font: 16px "Lexend Deca", sans-serif;
+}
+
+.pageHeader {
+    background-color: #f7f7e6;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-right: 7px;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+    margin-left: -7px;
+    margin-bottom: -17px;
+    margin-top: -5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: #4d8278;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navLinks a:hover {
+    background-color: #a9d3cb;
+    color: #f8f8ec;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4d8278;
+    color: #f7f7e6;
+    padding: 14px 32px;
+    font-size: 50px;
+}
