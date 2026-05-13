@@ -69,13 +69,13 @@ loginForm.addEventListener("submit", function (e) {
 
 sessionStorage.setItem("lastActivity", Date.now());
 
-window.location.href = "home.html";
+window.location.href = "index.html";
 
     // says that the user is logged in right now
     localStorage.setItem("loggedInUser", JSON.stringify(validUser));
 
     // brings user to home page
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 });
 
 // this will log the user out due to inactivity (code from stack overflow)
